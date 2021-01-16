@@ -24,7 +24,12 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 islogged: !state.islogged
             };
-
+            
+        case 'addAmount':
+            return {
+                ...state,
+                counter: action.amount
+            }
         default:
             return state
     }

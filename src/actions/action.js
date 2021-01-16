@@ -10,4 +10,9 @@ const islogged = () => ({
     type: "islogged"
 });
 
-export { increment, decrement, islogged };
+const addAmount = (amount) => ({
+    type: "addAmount",
+    amount: amount
+});
+
+export { increment, decrement, islogged, addAmount };
