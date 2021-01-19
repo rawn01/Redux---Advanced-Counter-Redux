@@ -29,7 +29,7 @@ function App() {
   };
 
   const addAmountClick = () => {
-    if(amount === "") {
+    if(amount === "" || amount === undefined || amount === null) {
       dispatch(addAmount(2));
     } else {
       dispatch(addAmount(parseInt(amount)));
