@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 
-import { islogged, increment, decrement, addAmount } from "../actions/action";
+import { increment, decrement, addAmount, signIn, signOut } from "../actions/action";
 
 function App() {
   const [amount, setAmount] = useState(); 
@@ -9,7 +9,11 @@ function App() {
   const dispatch = useDispatch();
 
   const loginOrLogout = () => {
-    dispatch(islogged());
+    if(store.islogged === false) {
+      dispatch(signIn());
+    } else {
+      dispatch(signOut());
+    }
   };
 
   const inc = () => {

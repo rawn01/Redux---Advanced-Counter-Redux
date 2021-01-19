@@ -24,12 +24,25 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 islogged: !state.islogged
             };
+
+        case 'SIGN_IN': 
+            return {
+                ...state,
+                islogged: true
+            };
+
+        case 'SIGN_OUT': 
+            return {
+                ...state,
+                islogged: false
+            };
             
-        case 'addAmount':
+        case 'INCREMENTBYAMOUNT':
             return {
                 ...state,
                 counter: action.amount
-            }
+            };
+
         default:
             return state
     }

@@ -6,13 +6,17 @@ const decrement = () => ({
     type: "DECREMENT"
 });
 
-const islogged = () => ({
-    type: "islogged"
+const signIn = () => ({
+    type: "SIGN_IN"
+});
+
+const signOut = () => ({
+    type: "SIGN_OUT"
 });
 
 const addAmount = (amount) => ({
-    type: "addAmount",
+    type: "INCREMENTBYAMOUNT",
     amount: amount
 });
 
-export { increment, decrement, islogged, addAmount };
+export { increment, decrement, addAmount, signIn, signOut };
