@@ -40,7 +40,7 @@ const reducer = (state = initialState, action) => {
         case 'INCREMENTBYAMOUNT':
             return {
                 ...state,
-                counter: action.amount
+                counter: action.payload
             };
 
         default:

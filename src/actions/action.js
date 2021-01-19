@@ -16,7 +16,7 @@ const signOut = () => ({
 
 const addAmount = (amount) => ({
     type: "INCREMENTBYAMOUNT",
-    amount: amount
+    payload: amount
 });
 
 export { increment, decrement, addAmount, signIn, signOut };
